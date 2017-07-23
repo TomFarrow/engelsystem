@@ -92,7 +92,7 @@ require_once realpath(__DIR__ . '/../includes/pages/user_settings.php');
 require_once realpath(__DIR__ . '/../includes/pages/user_shifts.php');
 
 require_once realpath(__DIR__ . '/../vendor/parsedown/Parsedown.php');
-require_once realpath(__DIR__ . '/../vendor/phpmailer/PHPMailerAutoload.php');
+require_once realpath(__DIR__ . '/../vendor/PHPMailer/PHPMailerAutoload.php');
 
 ini_set( 'session.cookie_httponly', 1 );
 ini_set( 'session.cookie_secure', 1 );

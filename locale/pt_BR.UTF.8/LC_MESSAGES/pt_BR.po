@@ -1578,7 +1578,7 @@ msgid "Create news:"
 msgstr "Criar novidades:"
 
 #: includes/pages/user_questions.php:4 includes/view/Questions_view.php:29
-msgid "Ask the Heaven"
+msgid "Questions"
 msgstr "Pergunte ao paraíso"
 
 #: includes/pages/user_questions.php:27
