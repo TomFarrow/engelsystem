@@ -95,7 +95,7 @@ require_once realpath(__DIR__ . '/../vendor/parsedown/Parsedown.php');
 require_once realpath(__DIR__ . '/../vendor/PHPMailer/PHPMailerAutoload.php');
 
 ini_set( 'session.cookie_httponly', 1 );
-ini_set( 'session.cookie_secure', 1 );
+ini_set( 'session.cookie_secure', 0 );
 
 session_start();
 
