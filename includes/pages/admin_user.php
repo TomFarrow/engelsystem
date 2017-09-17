@@ -30,8 +30,7 @@ function admin_user() {
     $html .= "  <tr><td>lastLogIn</td><td>" . date("Y-m-d H:i", $user_source['lastLogIn']) . "</td></tr>\n";
     $html .= "  <tr><td>Surname</td><td>" . "<input type=\"text\" size=\"40\" name=\"eName\" value=\"" . $user_source['Name'] . "\"></td></tr>\n";
     $html .= "  <tr><td>Forename</td><td>" . "<input type=\"text\" size=\"40\" name=\"eVorname\" value=\"" . $user_source['Vorname'] . "\"></td></tr>\n";
-    $html .= "  <tr><td>Telephone</td><td>" . "<input type=\"text\" size=\"40\" name=\"eTelefon\" value=\"" . $user_source['Telefon'] . "\"></td></tr>\n";
-    $html .= "  <tr><td>IGNORE</td><td>" . "<input type=\"text\" size=\"40\" name=\"eHandy\" value=\"" . $user_source['Handy'] . "\"></td></tr>\n";
+    $html .= "  <tr><td>Mobile</td><td>" . "<input type=\"text\" size=\"40\" name=\"eHandy\" value=\"" . $user_source['Handy'] . "\"></td></tr>\n";
     if ($user_source['email_by_human_allowed']) {
       $html .= "  <tr><td>email</td><td>" . "<input type=\"text\" size=\"40\" name=\"eemail\" value=\"" . $user_source['email'] . "\"></td></tr>\n";
     }
