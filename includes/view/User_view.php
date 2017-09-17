@@ -353,7 +353,7 @@ function User_view($user_source, $admin_user_privilege, $freeloader, $user_angel
               ($user_source['Gekommen'] && $admin_user_privilege && $user_source['Tshirt']) ? ' <span class="text-success">' . _("T-Shirt") . '</span>' : '' 
           ]),
           div('col-md-3', [
-              '<h4>' . _("Angeltypes") . '</h4>',
+              '<h4>' . _("Roles") . '</h4>',
               User_angeltypes_render($user_angeltypes) 
           ]),
           div('col-md-3', [

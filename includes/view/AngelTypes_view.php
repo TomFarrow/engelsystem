@@ -59,7 +59,7 @@ function AngelType_edit_view($angeltype, $supporter_mode) {
   $contact_info = AngelType_contact_info($angeltype);
   return page_with_title(sprintf(_("Edit %s"), $angeltype['name']), [
       buttons([
-          button(page_link_to('angeltypes'), _("Angeltypes"), 'back')
+          button(page_link_to('angeltypes'), _("Roles"), 'back')
       ]),
       msg(),
       form([
@@ -70,7 +70,7 @@ function AngelType_edit_view($angeltype, $supporter_mode) {
           //form_text('contact_name', _("Name"), $angeltype['contact_name']),
           //form_text('contact_dect', _("DECT"), $angeltype['contact_dect']),
           //form_text('contact_email', _("E-Mail"), $angeltype['contact_email']),
-          form_info("", _("Restricted angel types can only be used by an angel if enabled by a supporter (double opt-in).")),
+          form_info("", _("Restricted roles can only be selected by an volunteer if approved by a supporter (double opt-in).")),
           form_textarea('description', _("Description"), $angeltype['description']),
           form_info("", _("Please use markdown for the description.")),
           form_submit('submit', _("Save"))
@@ -83,7 +83,7 @@ function AngelType_edit_view($angeltype, $supporter_mode) {
  */
 function AngelType_view_buttons($angeltype, $user_angeltype, $admin_angeltypes, $supporter, $user_driver_license, $user) {
   $buttons = [
-      button(page_link_to('angeltypes'), _("Angeltypes"), 'back')
+      button(page_link_to('angeltypes'), _("Roles"), 'back')
   ];
 
   if ($angeltype['requires_driver_license']) {
