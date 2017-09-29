@@ -222,7 +222,7 @@ function guest_register() {
               div('col-md-6', [
                   div('row', [
                       div('col-sm-4', [
-                          form_text('nick', _("Name") . ' ' . entry_required(), $nick)
+                          form_text('nick', _("Username") . ' ' . entry_required(), $nick)
                       ]),
                       div('col-sm-8', [
                           form_email('mail', _("E-Mail") . ' ' . entry_required(), $mail),
@@ -255,7 +255,6 @@ function guest_register() {
                           form_text('mobile', _("Mobile"), $mobile)
                       ])
                   ]),
-                  form_text('jabber', _("Slack Username"), $jabber),
                   div('row', [
                       div('col-sm-6', [
                           form_text('prename', _("First name"), $prename)
