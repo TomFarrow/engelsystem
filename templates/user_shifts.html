@@ -1,13 +1,52 @@
 <script type="text/javascript">
-	function set_to_now(id) {
-		document.getElementById(id + '_time').value = moment().format('HH:mm');
-		var days = document.getElementById(id + '_day').getElementsByTagName(
-				'option');
-		for ( var i = 0; i < days.length; i++) {
-			if (days[i].value == moment().format('YYYY-MM-DD'))
-				days[i].selected = true;
-		}
-	}
+    function set_to_now(id) {
+        document.getElementById(id + '_time').value = moment().format('HH:mm');
+        var days = document.getElementById(id + '_day').getElementsByTagName(
+            'option');
+        for (var i = 0; i < days.length; i++) {
+            if (days[i].value == moment().format('YYYY-MM-DD'))
+                days[i].selected = true;
+        }
+    }
+
+    (function () {
+
+        var notRootNode = document.querySelector('form > input[type=hidden][value=user_shifts] ~ .row')
+
+
+        notRootNode.querySelector('.form-group:nth-child(3)').classList.add('hidden')
+
+        notRootNode.querySelector('.form-group:nth-child(4)').classList.add('hidden')
+
+        notRootNode.querySelector('.form-group:nth-child(5)').classList.add('hidden')
+
+
+        var startSelector = document.querySelector('#start_day')
+
+        var endSelector = document.querySelector('#end_day')
+
+
+        ;['change', 'input'].forEach(function (eventName) {
+
+            startSelector.addEventListener(eventName, function () {
+
+                endSelector.value = this.value
+
+            })
+
+        })
+
+
+        var startTime = document.querySelector('#start_time')
+
+        var endTime = document.querySelector('#end_time')
+
+
+        startTime.value = '00:01'
+
+        endTime.value = '23:59'
+
+    })()
 </script>
 <form class="form-inline" action="" method="get">
   <input type="hidden" name="p" value="user_shifts">
